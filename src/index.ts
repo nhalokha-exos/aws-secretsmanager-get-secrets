@@ -16,6 +16,7 @@ export async function run(): Promise<void> {
         const client : SecretsManagerClient = new SecretsManagerClient({region: process.env.AWS_DEFAULT_REGION, customUserAgent: "github-action"});
         const secretConfigInputs: string[] = [...new Set(core.getMultilineInput('secret-ids'))];
         const parseJsonSecrets = core.getBooleanInput('parse-json-secrets');
+        const outputSecrets = core.getBooleanInput('output-secrets');
 
         // Get final list of secrets to request
         core.info('Building secrets list...');

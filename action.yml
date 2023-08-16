@@ -12,6 +12,10 @@ inputs:
     description: '(Optional) If true, JSON secrets will be deserialized, creating a secret environment variable for each key-value pair.'
     required: false
     default: 'false'
+  output-secrets:
+    description: '(Optional) If true, creating an output of secret variable for each key-value pair.'
+    required: false
+    default: 'false'
 runs:
   using: 'node16'
   main: 'dist/index.js'
