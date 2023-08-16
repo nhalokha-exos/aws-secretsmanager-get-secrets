@@ -155,6 +155,7 @@ export function injectSecret(secretName: string, secretValue: string, parseJsonS
         // Export variable
         core.debug(`Injecting secret ${secretName} as environment variable '${envName}'.`);
         core.exportVariable(envName, secretValue);
+        core.setOutput(envName, secretValue);
         secretsToCleanup.push(envName);
     }
 
