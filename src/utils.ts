@@ -150,7 +150,7 @@ export function injectSecret(secretName: string, secretValue: string, parseJsonS
         }
 
         // Inject a single secret
-        core.setSecret(secretValue);
+//         core.setSecret(secretValue);
 
         // Export variable
         core.debug(`Injecting secret ${secretName} as environment variable '${envName}'.`);
